@@ -1,0 +1,55 @@
+MVC es una forma de organizar una
+aplicación separando responsabilidades.
+M -> Modelo
+V -> Vista
+C -> Controlador
+
+🧠 ¿Qué es el Modelo?
+El Modelo se encarga de los datos y de la base de datos.
+📌 El Modelo:
+se conecta a MySQL
+ejecuta consultas (SELECT, INSERT, UPDATE, DELETE)
+NO muestra HTML
+NO recibe formularios
+🧩 Ejemplos de responsabilidad del Modelo
+✔ consultar usuarios
+✔ guardar un usuario
+✔ actualizar datos
+❌ mostrar una tabla HTML
+
+🧠 ¿Qué es la Vista?
+La Vista se encarga de mostrar la información al usuario.
+📌 La Vista:
+contiene HTML
+puede usar PHP mínimo (<?= ?>)
+NO se conecta a la base de datos
+NO decide qué hacer
+🧩 Ejemplos de Vista
+✔ formularios
+✔ tablas
+✔ páginas HTML
+❌ consultas SQL
+
+🧠 ¿Qué es el Controlador?
+El Controlador es el intermediario entre la Vista y el Modelo.
+
+📌 El Controlador:
+recibe acciones del usuario (GET, POST)
+llama al Modelo
+decide qué Vista mostrar
+NO muestra HTML directamente
+
+🧩 Ejemplos de Controlador
+✔ recibir POST
+✔ validar datos
+✔ llamar al modelo
+✔ redirigir a una vista
+
+🧠 EJEMPLO CONCEPTUAL (SIN CÓDIGO)
+Caso: Mostrar usuarios
+
+Vista: botón “Ver usuarios”
+Controlador: recibe la petición
+Modelo: consulta la BD
+Vista: muestra la tabla
+Cada uno hace solo su trabajo.
